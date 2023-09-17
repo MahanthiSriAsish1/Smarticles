@@ -1,0 +1,43 @@
+img{
+    display: flex;
+   background-size: 220vw;
+   height: 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+p{
+    color: rgb(9, 154, 36);
+    font-weight: 600;
+}
+
+.discription{
+
+    animation: discription 1s ease-in-out infinite alternate;
+    
+}
+.descr{
+    font-family: sans-serif;
+    font-weight: 0;
+}
+.navbar{
+    background-image: url('./Screenshot\ 2023-09-15\ 220857.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:opacity(0.7) ;
+}
+.nav-item{
+    border-color: black;
+    border: 5px;
+    filter: drop-shadow(8px 8px 10px rgb(56, 63, 56));
+}
+@keyframes discription {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3f8406, 0 0 40px #7d9125, 0 0 50px #c6aa10, 0 0 60px #51bf0c;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px darkgreen;
+    }
+  }
