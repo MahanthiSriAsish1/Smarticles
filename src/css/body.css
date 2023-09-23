@@ -1,0 +1,10 @@
+.body-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    object-fit:cover;
+    overflow: hidden;
+    filter: brightness(0.7);  
+}

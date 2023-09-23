@@ -1,0 +1,58 @@
+/* Carousel.css */
+
+.carousel {
+    background-color:beige ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .slide-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  
+  .active {
+    transform: translateX(0);
+  }
+  
+  /* Add additional styles for customization as needed */
+  
