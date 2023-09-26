@@ -26,7 +26,6 @@ import App from '../App';
 
 
 import Carousel from './Components/Body.js';
-import Card from './Components/Card.jsx';
 import Navbar from './Components/Header.js';
 import './css/Carousel.css';
 // import './css/body.css'
