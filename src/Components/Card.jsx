@@ -33,22 +33,21 @@ const Card = ({ title, description, buttonText, imageSrc }) => {
             audio={false}
             screenshotFormat="image/jpeg"
           />
-          <button className="capture-button" onClick={handleCapturePhoto}>
+          <a className="capture-button" onClick={handleCapturePhoto}>
             Capture Photo
-          </button>
+          </a>
           {photo && (
             <img src={photo} alt="Captured" className="captured-image" />
           )}
         </div>
       ) : (
         <>
-          <img src={imageSrc} alt={title} className="card-image" />
-          <div className="card-content">
           
-            <button className="card-button" onClick={handleStartCamera}>
-              {buttonText}
-            </button>
-          </div>
+          
+            <a className="card-button" onClick={handleStartCamera}> read more </a>
+              
+            
+        
         </>
       )}
     </div>
