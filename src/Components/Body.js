@@ -9,7 +9,7 @@ function carousel() {
       <div className='p-0 , m-0'>
         <Carousel>
           <Carousel.Item>
-            <img style={{ maxHeight: "57vh" }}
+            <img
               className="d-block w-100"
               src='https://images.unsplash.com/photo-1538438253612-287c9fc9217e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
               alt="First slide"
@@ -20,7 +20,7 @@ function carousel() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img style={{ maxHeight: "57vh" }}
+            <img 
               className="d-block w-100"
               src='https://images.unsplash.com/photo-1551970634-747846a548cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
               alt="Second slide"
@@ -32,7 +32,7 @@ function carousel() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img style={{ maxHeight: "57vh" }}
+            <img 
               className="d-block w-100"
               src='https://images.unsplash.com/photo-1477511801984-4ad318ed9846?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
               alt="Third slide"
