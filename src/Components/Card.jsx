@@ -5,7 +5,7 @@ import Webcam from 'react-webcam';
 import '../css/Card.css';
 import axios from "axios";
 
-const Card = ({ title, description, buttonText, imageSrc }) => {
+const Card = () => {
   const webcamRef = useRef(null);
   const [showCamera, setShowCamera] = useState(false);
   const [photo, setPhoto] = useState(null);
@@ -18,9 +18,6 @@ const Card = ({ title, description, buttonText, imageSrc }) => {
     const imageSrc = webcamRef.current.getScreenshot();
     setPhoto(imageSrc);
     // You can send this captured image to your Node.js API here.
-   
-
-    
   };
 
   return (
@@ -33,21 +30,16 @@ const Card = ({ title, description, buttonText, imageSrc }) => {
             audio={false}
             screenshotFormat="image/jpeg"
           />
-          <a className="capture-button" onClick={handleCapturePhoto}>
+          <button className="capture-button" onClick={handleCapturePhoto}>
             Capture Photo
-          </a>
+          </button>
           {photo && (
             <img src={photo} alt="Captured" className="captured-image" />
           )}
         </div>
       ) : (
         <>
-          
-          
-            <a className="card-button" onClick={handleStartCamera}> read more </a>
-              
-            
-        
+            <button className="card-button" onClick={handleStartCamera}> read more </button>
         </>
       )}
     </div>
