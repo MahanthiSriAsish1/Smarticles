@@ -9,56 +9,10 @@
     transform: translateY(0);
   }
 }
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    justify-content: space-between;
-    align-items: center;
-    /* background:  0% 0% / cover no-repeat #6527BE; */
-    background:  0% 0% / cover no-repeat;
-    padding: 10px 20px;
-    margin: 0%;
-    height: 80px;
-    animation: navbar 1s ease-in-out infinite alternate;
-  }
-  .navbar.scrolled {
+
+  header.scrolled {
     animation: scrolled 0.95s ease forwards;
     scroll-behavior:auto;
   }
   
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    color: black;
-  }
-  
-  .nav-links li {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-links a {
-    display: flex;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    align-items: center;
-  }
-  html, body {
-    height: 100%;
-  }
-
-
-  /* Add additional styles for customization as needed */
   
