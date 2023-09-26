@@ -1,9 +1,0 @@
-.body-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    object-fit:cover;
-    background:  0% 0% / cover no-repeat rgb(208, 234, 243);
-    justify-content: space-around;
-}
