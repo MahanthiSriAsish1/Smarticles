@@ -7,14 +7,15 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    margin: 0px auto;
+    height: 100vh;
   }
   
   .slide-container {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: 100vh;
   }
   
   .slide {
@@ -52,6 +53,17 @@
   .active {
     transform: translateX(0);
   }
-  
+  .re-button {
+    background-color: #13e181;
+    height: 100px;
+    color: #000000;
+   bottom: 200%!important;
+   left: 60%!important;
+    position: absolute;
+  }
+  .image{
+    position: relative;
+  }
+ 
   /* Add additional styles for customization as needed */
   

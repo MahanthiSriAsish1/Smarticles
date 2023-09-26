@@ -4,6 +4,6 @@
     width: 100%;
     position: absolute;
     object-fit:cover;
-    background:  0% 0% / cover no-repeat rgb(208, 234, 243);
+    background:  0% 0% / cover no-repeat #ECF9FF;
     justify-content: space-around;
 }

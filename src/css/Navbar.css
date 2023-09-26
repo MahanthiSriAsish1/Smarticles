@@ -1,11 +1,12 @@
 /* Navbar.css */
-@keyframes navbar {
-  from {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3f8406, 0 0 40px #7d9125, 0 0 50px #c6aa10, 0 0 60px #51bf0c;
+@keyframes scrolled {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
-  
-  to {
-    box-shadow: 0 0 20px #fff, 0 0 30px darkgreen;
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 .navbar {
@@ -18,11 +19,16 @@
     z-index: 10;
     justify-content: space-between;
     align-items: center;
-    background:  0% 0% / cover no-repeat rgb(208, 234, 243);
+    /* background:  0% 0% / cover no-repeat #6527BE; */
+    background:  0% 0% / cover no-repeat;
     padding: 10px 20px;
     margin: 0%;
     height: 80px;
     animation: navbar 1s ease-in-out infinite alternate;
+  }
+  .navbar.scrolled {
+    animation: scrolled 0.95s ease forwards;
+    scroll-behavior:auto;
   }
   
   .logo {
@@ -34,6 +40,7 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    color: black;
   }
   
   .nav-links li {
@@ -51,10 +58,7 @@
   html, body {
     height: 100%;
   }
-  .navbar:hover { 
-    background-color: #fed351;
- color: #fff;
-  box-shadow:         0px 0px 16px 4px #5863dd !important;
-}
+
+
   /* Add additional styles for customization as needed */
   
