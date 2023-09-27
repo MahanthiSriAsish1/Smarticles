@@ -26,21 +26,21 @@ function Carousel() {
    
       
       <div className={`content ${activeSlide === 0 ? "active" : ""}`}>
-        <h1>Wonderful.<br /><span>Island</span></h1>
-        <p>Your content here...</p>
+        <h1>Is your crop healthy?<br /></h1>
+        <p>just send a snap and get the information you want</p>
           <Card />
       </div>
       
       <div className={`content ${activeSlide === 1 ? "active" : ""}`}>
-        <h1>Camping.<br /><span>Enjoy</span></h1>
-        <p>Your content here...</p>
+        <h1>want to know your plant's comdition?<br /></h1>
+        <p>diagnose it with simple pic</p>
           <Card />
         
       </div>
       
       <div className={`content ${activeSlide === 2 ? "active" : ""}`}>
-        <h1>Adventures.<br /><span>Off Road</span></h1>
-        <p>Your content here...</p>
+        <h1>Diagnose your animal<br /></h1>
+        <p>send the pic of it by pressing the below button</p>
           <Card/>
       </div>
       

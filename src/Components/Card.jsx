@@ -8,6 +8,7 @@ import axios from "axios";
 const Card = () => {
   const webcamRef = useRef(null);
   const [showCamera, setShowCamera] = useState(false);
+  const [Prediction,setPrediction] =useState(null);
   const [photo, setPhoto] = useState(null);
 
   const handleStartCamera = () => {
@@ -17,7 +18,19 @@ const Card = () => {
   const handleCapturePhoto = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setPhoto(imageSrc);
-    // You can send this captured image to your Node.js API here.
+    const handlePredict = async () => {
+      const formData = new FormData();
+      formData.append('image', photo);
+    
+      try {
+        const response = await axios.post('/api/predict', formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        });
+    
+        setPrediction(response.data.prediction);
+      } catch (error) {
+        console.error('Error:', error);
+        }}
   };
 
   return (
@@ -31,7 +44,7 @@ const Card = () => {
             screenshotFormat="image/jpeg"
           />
           <button className="capture-button" onClick={handleCapturePhoto}>
-            Capture Photo
+            confirm snap
           </button>
           {photo && (
             <img src={photo} alt="Captured" className="captured-image" />
@@ -39,7 +52,7 @@ const Card = () => {
         </div>
       ) : (
         <>
-            <button className="card-button" onClick={handleStartCamera}> read more </button>
+            <button className="card-button" onClick={handleStartCamera}> open Camera </button>
         </>
       )}
     </div>

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     
       <header classNameName = {scrolled ? 'header scrolled' : 'header'}>
-      <a href="#" className="brand">Travel</a>
+      <a href="#" className="brand">AgriCure</a>
       <div className="menu-btn"></div>
       <div className="navigation">
         <div className="navigation-items">
