@@ -1,12 +1,16 @@
 import React from "react";
 import "../css/register.css"
+import { useNavigate } from "react-router-dom";
 
-export default function logout() {
+export default function Register() {
+    const navigate =useNavigate();
+
+    const GoToLogin =() =>{
+        navigate('/');
+    };
+
     return (
         <>
-            <header>
-
-            </header>
             <div>            
                 <div className="form-box register wrapper">
                 <h2>Register</h2>
@@ -32,7 +36,7 @@ export default function logout() {
                     </div>
                     <button type="submit" className="btn">Register</button>
                     <div className="logo-register">
-                        <p>Already have an account?<a href="./loginpage1.html" className="login-link">Login</a></p>
+                        <p>Already have an account?<a className="login-link" onClick={GoToLogin}>Login</a></p>
                     </div>
                 </form>
             </div>

@@ -2,15 +2,6 @@ import React, { useState ,useRef} from "react";
 import '../css/Carousel.css'; // Import your stylesheet here
 import Webcam from 'react-webcam';
 
-
-
-
-
-
-
-
-
-
 function Carousel() {
   const webcamRef = useRef(null);
   const [showCamera, setShowCamera] = useState(false);
