@@ -2,10 +2,12 @@
 import '../css/Carousel.css';
 import React, { useState } from 'react';
 import '../css/Navbar.css';
-import logo from "./logo192.png"
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
-  
+
+    const navigate =useNavigate();
     const [scrolled, setScrolled] = useState(false);
   
     window.addEventListener('scroll', () => {
@@ -15,6 +17,14 @@ const Navbar = () => {
         setScrolled(false);
       }
     });
+
+    const gotohome=()=>{
+      navigate('/Loginsuccessful');
+    };
+
+    const gotoabout=()=>{
+      navigate('/About');
+    };
   
   return (
     
@@ -23,8 +33,8 @@ const Navbar = () => {
       <div className="menu-btn"></div>
       <div className="navigation">
         <div className="navigation-items">
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <a onClick={gotohome}>Home</a>
+          <a onClick={gotoabout}>About</a>
           <a href="#">Explore</a>
           <a href="#">Gallery</a>
           <a href="#">Contact</a>
@@ -34,4 +44,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;

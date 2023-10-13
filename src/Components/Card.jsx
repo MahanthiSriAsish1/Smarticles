@@ -11,27 +11,36 @@ const Card = () => {
   const [Prediction,setPrediction] =useState(null);
   const [photo, setPhoto] = useState(null);
 
+  
+
   const handleStartCamera = () => {
     setShowCamera(true);
   };
-
+  
   const handleCapturePhoto = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setPhoto(imageSrc);
-    const handlePredict = async () => {
+  
+    const handlePredict = async (photo) => {
       const formData = new FormData();
       formData.append('image', photo);
-    
+  
       try {
-        const response = await axios.post('/api/predict', formData, {
+        const response = await axios.post('http://localhost:5000/api/predict', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
-    
-        setPrediction(response.data.prediction);
+  
+        setPrediction(response.body);
+        console.log(Prediction);
       } catch (error) {
-        console.error('Error:', error);
-        }}
+        console.error('Error:', error);
+      }
+    };
+  
+    // Call the handlePredict function with the imageSrc as the argument.
+    handlePredict(imageSrc);
   };
+  
 
   return (
     <div className="card">

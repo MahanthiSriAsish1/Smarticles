@@ -63,7 +63,7 @@ header .navigation .navigation-items a:hover:before{
 
 .home{
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -72,7 +72,7 @@ header .navigation .navigation-items a:hover:before{
   padding: 100px 200px;
 }
 
-.home:before{
+/* .home:before{
   z-index: 777;
   content: '';
   position: absolute;
@@ -81,7 +81,7 @@ header .navigation .navigation-items a:hover:before{
   height: 100%;
   top: 0;
   left: 0;
-}
+} */
 
 .home .content{
   z-index: 888;
